@@ -1,0 +1,183 @@
+NET-9@DESKTOP-Q1G65NH MINGW64 ~
+$ git config --global user.name "rohith"
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~
+$ git config --global user.email "rohith@gmail.com"
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/TEMP.DESKTOP-Q1G65NH.004/.git/
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ touch hello.java
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git status
+warning: could not open directory 'AppData/Local/Application Data/': Permission denied
+warning: could not open directory 'Application Data/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Local Settings/': Permission denied
+warning: could not open directory 'My Documents/': Permission denied
+warning: could not open directory 'NetHood/': Permission denied
+warning: could not open directory 'PrintHood/': Permission denied
+warning: could not open directory 'Recent/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+warning: could not open directory 'Start Menu/': Permission denied
+warning: could not open directory 'Templates/': Permission denied
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitconfig
+        3D Objects/
+        AppData/
+        Contacts/
+        Desktop/
+        Documents/
+        Downloads/
+        Favorites/
+        Links/
+        Music/
+        NTUSER.DAT
+        NTUSER.DAT{10007df4-18d2-11ea-bb5c-3417ebacae83}.TM.blf
+        NTUSER.DAT{10007df4-18d2-11ea-bb5c-3417ebacae83}.TMContainer00000000000000000001.regtrans-ms
+        NTUSER.DAT{10007df4-18d2-11ea-bb5c-3417ebacae83}.TMContainer00000000000000000002.regtrans-ms
+        OneDrive/
+        Pictures/
+        Saved Games/
+        Searches/
+        Videos/
+        hello.java
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git add hello.java
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git commit -m "added java program"
+[master (root-commit) a25f26f] added java program
+ 1 file changed, 3 insertions(+)
+ create mode 100644 hello.java
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git remote add origin https://github.com/Rohitharigela08/git-course
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Rohitharigela08/git-course/pull/new/master
+remote:
+To https://github.com/Rohitharigela08/git-course
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ ^C
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git merge main
+merge: main - not something we can merge
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ ^C
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git branch -r
+  origin/master
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ ^C
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$ git fetch origin
+remote: Enumerating objects: 28, done.
+remote: Counting objects: 100% (28/28), done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 28 (delta 0), reused 28 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (28/28), 2.73 KiB | 2.00 KiB/s, done.
+From https://github.com/Rohitharigela08/git-course
+ * [new branch]      ar         -> origin/ar
+ * [new branch]      ar_java_01 -> origin/ar_java_01
+ * [new branch]      f1         -> origin/f1
+ * [new branch]      main       -> origin/main
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (master)
+$
+Merge branch 'master' into 'main'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ hello.java | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 hello.java
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 330 bytes | 330.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Rohitharigela08/git-course
+   3c36c62..60d3b06  main -> main
+
+NET-9@DESKTOP-Q1G65NH MINGW64 ~ (main)
+$
